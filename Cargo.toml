@@ -1,0 +1,16 @@
+[package]
+name = "flammkuchen"
+description = "Some data structures for fun and flammkuchen (e.g. a 2d grid which permits negative indices)"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/crate/flammkuchen"
+repository = "https://github.com/foresterre/flammkuchen"
+readme = "README.md"
+keywords = ["grid", "two", "dimension", "data-structure", "Flammekueche"]
+categories = ["data-structures"]
+rust-version = "1.56"
+exclude = [".github"]
+
+[dependencies]
+yare = "3.0.0"
