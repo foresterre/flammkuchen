@@ -1,0 +1,23 @@
+name: "msrv"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '00 05 * * *'
+jobs:
+  msrv:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install cargo-msrv
+      - run: cargo msrv --version
+      - run: cargo msrv verify --output-format json --ignore-lockfile
+      - if: ${{ failure() }}
+        run: cargo msrv find --output-format json --ignore-lockfile
+
+      # run tests
+      - run: cargo msrv verify --ignore-lockfile -- cargo test
