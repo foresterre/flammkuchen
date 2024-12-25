@@ -1,7 +1,7 @@
 [package]
 name = "flammkuchen"
 description = "Some data structures for fun and flammkuchen (e.g. a 2d grid which permits negative indices)"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 documentation = "https://docs.rs/crate/flammkuchen"
