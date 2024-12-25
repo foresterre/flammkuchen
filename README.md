@@ -1,4 +1,4 @@
-_ome data structures for fun and flammkuchen._
+_Some data structures for fun and flammkuchen._
 
 Find more at [docs.rs/flammkuchen](https://docs.rs/flammkuchen).
 
